@@ -6,7 +6,7 @@ alphabet = '''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ~`!
 cipher = ''''''
 
 
-File = open('./Data/Enigma.Eng', 'ab')
+File = open('../Data/Enigma.Eng', 'ab')
 r1 = list(alphabet)
 random.shuffle(r1)
 r1 = ''.join(r1)
@@ -20,7 +20,7 @@ r3 = ''.join(r3)
 dump((r1, r2, r3), File)
 File.close()
 
-file = open("./Data/Enigma.Eng", "rb")
+file = open("../Data/Enigma.Eng", "rb")
 Rotor1, Rotor2, Rotor3 = load(file)
 file.close()
 

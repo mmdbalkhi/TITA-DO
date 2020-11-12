@@ -13,13 +13,13 @@ print("please Enter alphabet a short!")
 
 while True:
     todo = str(input('YourTodo?'))
-    if todo == 'exit' or 'quit' or 'Exit' or 'EXIT' or 'Quit' or 'Quit':
-        todo = str(input('Ary you sure?'))
-        if todo == 'ok' or 'yes' or 'Yes' or 'Ok':
+    if todo == 'exit':
+        close = str(input('Ary you sure?'))
+        if close == 'ok':
             print('goodbye!')
             break
-    elif todo == 'Show now' or 'show now' or 'SHOW NOW' or 'show Now' or 'Show Now':
-        print('show')
+    elif todo == 'Show now':
+        print('showed!')
         print(todo)
         #break
     else:

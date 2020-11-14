@@ -8,8 +8,9 @@ while True:
     todo = str(input('YourTodo?'))
 
     file = open("Data.tita')", "a")
-    file.write(todo)
-    file.write('\n')
+    file.writelines(todo)
+    file.writelines('\n')
+    file.close()
     if todo == 'exit':
         close = str(input('Ary you sure?'))
         if close == 'ok':
@@ -18,9 +19,11 @@ while True:
     elif todo == 'Show now':
         print('showed!')
         print(todo)
-        if exists('../Data/Data.tita') == True:
-            with open("Data.tita')", "r") as file:
+        if exists('Data.tita'):
+            with open("Data.tita", "r") as file:
+
                 print(file.read())
+                file.close()
     else:
         print("hello!")
         #break

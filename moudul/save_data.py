@@ -1,5 +1,4 @@
 """save data data in TITA-DO project
-
 """
 from os.path import exists
 from sys import exit

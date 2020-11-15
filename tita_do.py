@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TITA-DO GPL3 licance.
+TITA-DO MIT licance.
 """
 #import pickle
 from time import sleep

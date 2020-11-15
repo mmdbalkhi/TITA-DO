@@ -64,6 +64,6 @@ def Enigma_starter(plain):
         state += 1
         cipher += enigma_one_char(char)
         rotate_rotors()
-    
+
     # that's print!
     return(cipher)

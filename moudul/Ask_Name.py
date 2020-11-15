@@ -13,12 +13,13 @@ def sha_maker(data):
 
 def ask_name():
     Name =Enigma_starter(str(input("hello! What is your password? = ")))
+    #print(Name)
     Name = sha_maker(Name)
-    if exists('./Data/pass.Tdo') == True:
-        with open("./Data/pass.Tdo", "r") as file:
+    #print(Name)
+    if exists('./Data/pass.Tita') == True:
+        with open("./Data/pass.Tita", "r") as file:
             #f.write(one_line)
             CurrentName = file.read()
-            
             while CurrentName != Name:
                 print("Your name is different\nPlease enter a correct password!")
                 Name = str(input("What is your password? = "))
@@ -29,7 +30,7 @@ def ask_name():
                     print("Access denied\nYou can't access and use progeam")
                     return False
                     exit()
-    if exists('./Data/pass.Tdo') == False:
-        with open("./Data/pass.Tdo", "w") as file:
+    if exists('./Data/pass.Tita') == False:
+        with open("./Data/pass.Tita", "w") as file:
             str(file.write(Name))
             print("your password is Crated \n \t\t welcome!")

@@ -1,10 +1,9 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-TITA-DO GPL3 licance.
-"""
-#import pickle
+#!/usr/bin/env python
+# coding: utf-8
+
+import warnings
 from time import sleep
+
 from moudul.Ask_Name import ask_name
 from moudul.enigma import Enigma_starter
 

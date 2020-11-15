@@ -1,21 +1,13 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-import warnings
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+TITA-DO GPL3 licance.
+"""
+#import pickle
 from time import sleep
-
 from moudul.Ask_Name import ask_name
 from moudul.enigma import Enigma_starter
 from sys import exit
-<<<<<<< HEAD
-print("\n \t :)   You Todo with TITA-DO    (:")
-print(" TITA-DO      =.|.=     1.0.0 version")
-print("")
-
-if ask_name() == False:
-    exit()
-
-=======
 
 print("\n\t :)   You Todo with TITA-DO    (:")
 print(" TITA-DO      =.|.=     Hyd_Prime version")
@@ -24,7 +16,6 @@ print("\n\n")
 if ask_name() == False:
     print("\n\n\t***TITA-DO Hyd_Prime Ver***")
     exit()
->>>>>>> save_data
 
 
 def write_file(data, name):

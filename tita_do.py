@@ -7,11 +7,15 @@ TITA-DO GPL3 licance.
 from time import sleep
 from moudul.Ask_Name import ask_name
 from moudul.enigma import Enigma_starter
+from sys import exit
 
-print("\n \t :)   You Todo with TITA-DO    (:")
-print(" TITA-DO      =.|.=     1.0.0 version")
-print("")
-ask_name()
+print("\n\t :)   You Todo with TITA-DO    (:")
+print(" TITA-DO      =.|.=     Hyd_Prime version")
+print("\n\n")
+
+if ask_name() == False:
+    print("\n\n\t***TITA-DO Hyd_Prime Ver***")
+    exit()
 
 
 def write_file(data, name):

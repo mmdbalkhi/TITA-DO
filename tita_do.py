@@ -5,9 +5,10 @@ TITA-DO GPL3 licance.
 """
 #import pickle
 from time import sleep
-from moudul.Ask_Name import ask_name
-from moudul.enigma import Enigma_starter
 from sys import exit
+from moudul.ask_name import ask_name
+from moudul.enigma import Enigma_starter
+
 
 print("\n\t :)   You Todo with TITA-DO    (:")
 print(" TITA-DO      =.|.=     Hyd_Prime version")
@@ -19,14 +20,14 @@ if ask_name() == False:
 
 
 def write_file(data, name):
-    #write data for TITA.DO
+    '''write data for TITA.DO'''
     file_tita = open(name, 'a')
     file_tita.writelines(data)
     file_tita.close()
     return data
 
 def load_file():
-   #load data in TITA.DO
+    '''load data in TITA.DO'''
     file_tita = open('Temp.txt', 'r')
     file_tita.readline()
     file_tita.close()

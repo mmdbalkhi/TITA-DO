@@ -17,6 +17,6 @@ This program is made with **pickled** and **time** libraries, which are installe
 
 ----------------------
 
-###     *Version* *1* 
+###     *Version* *Hed Prime* 
 
 ## <center>KomeilParseh</center> 

@@ -2,10 +2,11 @@
 from random import shuffle
 from pickle import dump, load
 
-alphabet = '''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ~`!@#$%^&*()-_=+\|}]{["':;?/>.<,'''
+alphabet = '''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~`!@#$%^&*()-_=+\|}]{["':;?/>.<, '''
 cipher = ''''''
 
 
+<<<<<<< HEAD
 def rotor_genarator():
     r1 = list(alphabet)
     shuffle(r1)
@@ -24,20 +25,35 @@ def rotor_genarator():
     dump((r1, r2, r3), File)
     
     File.close()
+=======
+File = open('../Data/Enigma.Eng', 'ab')
+r1 = list(alphabet)
+random.shuffle(r1)
+r1 = ''.join(r1)
+r2 = list(alphabet)
+random.shuffle(r2)
+r2 = ''.join(r2)
+>>>>>>> save_data
 
 rotor_genarator()
 
+<<<<<<< HEAD
 
 file = open('./Data/Enigma.Tita', 'rb')
+=======
+file = open("../Data/Enigma.Eng", "rb")
+>>>>>>> save_data
 Rotor1, Rotor2, Rotor3 = load(file)
 file.close()
 #print ('rotor is ....',Rotor1,'  ' ,Rotor2,'  ' ,Rotor3)
 #print(len(alphabet))
 
 def reflector(char):
+    '''reflector func'''
     return alphabet[len(alphabet)-alphabet.find(char)-1]
 
 def enigma_one_char(char):
+    '''enigma_one_char func'''
     char1 = Rotor1[alphabet.find(char)]
     char2 = Rotor2[alphabet.find(char1)]
     char3 = Rotor3[alphabet.find(char2)]
@@ -50,6 +66,7 @@ def enigma_one_char(char):
 
 state = 0
 def rotate_rotors():
+    '''enigma_one_char'''
     global Rotor1, Rotor2, Rotor3
     Rotor1 = Rotor1[1:] + Rotor1[0]
     if state % 26:

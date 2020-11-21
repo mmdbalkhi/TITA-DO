@@ -15,7 +15,7 @@ print(" TITA-DO      =.|.=     Hyd_Prime version")
 print("\n\n")
 
 if ask_name() == False:
-    print("\n\n\t***TITA-DO Hyd_Prime Ver***")
+    print("\n\n\t***TITA-DO Ver Hyd 1 ***")
     exit()
 
 

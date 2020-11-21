@@ -7,6 +7,7 @@ cipher = ''''''
 
 
 File = open('./Data/Enigma.Eng', 'ab')
+<<<<<<< HEAD
 r1 = list(alphabet)
 shuffle(r1)
 r1 = ''.join(r1)
@@ -18,6 +19,21 @@ rotor_genarator()
 
 
 file = open('./Data/Enigma.Tita', 'rb')
+=======
+Rotor1 = list(alphabet)
+random.shuffle(Rotor1)
+Rotor1 = ''.join(Rotor1)
+Rotor2 = list(alphabet)
+random.shuffle(Rotor2)
+Rotor2 = ''.join(Rotor2)
+
+Rotor3 = list(alphabet)
+random.shuffle(Rotor3)
+Rotor3 = ''.join(Rotor3)
+dump((Rotor1, Rotor2, Rotor3), File)
+File.close()
+
+>>>>>>> save_data
 file = open("./Data/Enigma.Eng", "rb")
 Rotor1, Rotor2, Rotor3 = load(file)
 file.close()

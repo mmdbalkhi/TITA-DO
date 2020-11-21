@@ -6,43 +6,19 @@ alphabet = '''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~`!@
 cipher = ''''''
 
 
-<<<<<<< HEAD
-def rotor_genarator():
-    r1 = list(alphabet)
-    shuffle(r1)
-    r1 = ''.join(r1)
-    
-    r2 = list(alphabet)
-    shuffle(r2)
-    r2 = ''.join(r2)
-    
-    r3 = list(alphabet)
-    shuffle(r3)
-    r3 = ''.join(r3)
-    
-    File=open('./Data/Enigma.Tita', 'ab')
-    
-    dump((r1, r2, r3), File)
-    
-    File.close()
-=======
-File = open('../Data/Enigma.Eng', 'ab')
+File = open('./Data/Enigma.Eng', 'ab')
 r1 = list(alphabet)
-random.shuffle(r1)
+shuffle(r1)
 r1 = ''.join(r1)
 r2 = list(alphabet)
-random.shuffle(r2)
+shuffle(r2)
 r2 = ''.join(r2)
->>>>>>> save_data
 
 rotor_genarator()
 
-<<<<<<< HEAD
 
 file = open('./Data/Enigma.Tita', 'rb')
-=======
-file = open("../Data/Enigma.Eng", "rb")
->>>>>>> save_data
+file = open("./Data/Enigma.Eng", "rb")
 Rotor1, Rotor2, Rotor3 = load(file)
 file.close()
 #print ('rotor is ....',Rotor1,'  ' ,Rotor2,'  ' ,Rotor3)

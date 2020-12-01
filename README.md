@@ -8,8 +8,7 @@ This program is made with **pickled** and **time** libraries, which are installe
 
 ![](http://s10.picofile.com/file/8406880900/2020_08_26_20_16_10.gif)
 
-
-### TODO List 
+### TODO List
 
 - [x]  load last data!
 - [x]  Make the app more secure, Uses encryption for your information
@@ -17,6 +16,4 @@ This program is made with **pickled** and **time** libraries, which are installe
 
 ----------------------
 
-###     *Version* *1* 
-
-## <center>KomeilParseh</center> 
+## <center> Ver Hyd 1.0 </center>

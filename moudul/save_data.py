@@ -4,6 +4,9 @@ from os.path import exists
 from sys import exit
 from enigma import Enigma_starter
 
+def enigma(word):
+    return Enigma_starter(word)
+'''
 print("please Enter alphabet a short!")
 number = 0
 while True:
@@ -12,7 +15,7 @@ while True:
         print(todo)
         number += 1
         file = open("Data.tita", "a")
-        file.writelines([todo, str(number)])
+        file.writelines(todo)
         file.writelines('\n')
         file.close()
     if todo == 'exit':
@@ -27,3 +30,12 @@ while True:
             with open("Data.tita", "r") as file:
                 print(file.read())
                 file.close()
+'''
+print(Enigma_starter("""a
+x
+zx
+zsd
+asd
+a
+c
+vc"""))

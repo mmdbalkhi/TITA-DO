@@ -1,29 +1,12 @@
 """crate with python3, this is a moduls tita do, Enigma simulator! crptugraphi for data!"""
-from random import shuffle
-from pickle import dump, load
+from pickle import load, dump
+import random
 
 alphabet = '''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~`!@#$%^&*()-_=+\|}]{["':;?/>.<, '''
 cipher = ''''''
 
 
-<<<<<<< HEAD
 File = open('./Data/Enigma.Eng', 'ab')
-<<<<<<< HEAD
-r1 = list(alphabet)
-shuffle(r1)
-r1 = ''.join(r1)
-r2 = list(alphabet)
-shuffle(r2)
-r2 = ''.join(r2)
-
-rotor_genarator()
-
-
-file = open('./Data/Enigma.Tita', 'rb')
-=======
-=======
-File = open('../Data/Enigma.Eng', 'ab')
->>>>>>> save_data
 Rotor1 = list(alphabet)
 random.shuffle(Rotor1)
 Rotor1 = ''.join(Rotor1)
@@ -37,16 +20,9 @@ Rotor3 = ''.join(Rotor3)
 dump((Rotor1, Rotor2, Rotor3), File)
 File.close()
 
-<<<<<<< HEAD
->>>>>>> save_data
 file = open("./Data/Enigma.Eng", "rb")
-=======
-file = open("../Data/Enigma.Eng", "rb")
->>>>>>> save_data
 Rotor1, Rotor2, Rotor3 = load(file)
 file.close()
-#print ('rotor is ....',Rotor1,'  ' ,Rotor2,'  ' ,Rotor3)
-#print(len(alphabet))
 
 def reflector(char):
     '''reflector func'''
@@ -64,7 +40,6 @@ def enigma_one_char(char):
 
     return char1
 
-state = 0
 def rotate_rotors():
     '''enigma_one_char'''
     global Rotor1, Rotor2, Rotor3
@@ -74,13 +49,15 @@ def rotate_rotors():
     if state % (26 * 26):
         Rotor3 = Rotor3[1:] + Rotor3[0]
 
+state = 0
 
 def Enigma_starter(plain):
-    global state, cipher
+    """Enigma Starter! Enigma Simulator"""
     for char in plain:
+        global state, cipher
         state += 1
         cipher += enigma_one_char(char)
         rotate_rotors()
 
     # that's print!
-    return(cipher)
+    return cipher

@@ -4,9 +4,13 @@
 
 The hyd version is currently under development and up to secondary information is supported.
 
+---------------------------------
 | Version | Supported          |
 | ------- | ------------------ |
-| Hyd 1   | :white_check_mark: |
+| Hyd 1   | :heavy_check_mark: |
+| version 1| :white_check_mark: |
+
+----------------------------------
 
 ## Reporting a Vulnerability
 

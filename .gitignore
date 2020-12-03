@@ -130,5 +130,6 @@ dmypy.json
 
 #my type
 *.Eng
-*.Tita 
+*.Tita
 *.do
+*.sqlite3

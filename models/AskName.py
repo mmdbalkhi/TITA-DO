@@ -14,14 +14,14 @@ def sha_maker(data):
     return hash
 
 def ask_name():
-    '''ask_name fun'''
-    input_name = Enigma_starter(str(input("hello! What is your Name? = ")))
-    input_pass = Enigma_starter(str(input("hello! What is your passport? = ")))
-    input_name = sha_maker(input_name)
-    input_pass = sha_maker(input_pass)
+    '''ask_name func'''
 
     if exists('./Data/user.Tita') == True:
         with open("./Data/user.Tita", "r") as file:
+            input_name = Enigma_starter(str(input("hello! What is your Name? = ")))
+            input_pass = Enigma_starter(str(input(" What is your passport? = ")))
+            input_name = sha_maker(input_name)
+            input_pass = sha_maker(input_pass)
             #f.write(one_line)
             current_name = file.read()
             while current_name != input_name:
@@ -44,7 +44,27 @@ def ask_name():
 
     if exists('./Data/user.Tita') == False:
         with open("./Data/user.Tita", "w") as file:
-            file_p = open('./Data/pass.Tita', 'wb')
-            dump(str(input_pass), file_p)
-            str(file.write(input_name))
-            print("your user is Crated \n \t\t welcome!")
+            input_name = Enigma_starter(str(input("hello! What is your Name? = ")))
+            input_pass = Enigma_starter(str(input("1 What is your password? = ")))
+            passwords = Enigma_starter(str(input("2 What is your password? = ")))
+
+            if passwords == input_pass:
+                input_name = sha_maker(input_name)
+                input_pass = sha_maker(input_pass)
+                file_p = open('./Data/pass.Tita', 'wb')
+                dump(str(input_pass), file_p)
+                str(file.write(input_name))
+                print("your user is Crated \n \t\t welcome!")
+            
+            if input_pass != passwords:
+                while passwords == input_pass:
+                    print('password 1 va 2 barabar nistand! ')
+                    input_pass = Enigma_starter(str(input("1 What is your password? = ")))
+                    passwords = Enigma_starter(str(input("2 What is your password? = ")))
+                    
+                    if passwords == input_pass:
+                        file_p = open('./Data/pass.Tita', 'wb')
+                        dump(str(input_pass), file_p)
+                        str(file.write(input_name))
+                        print("your user is Crated \n \t\t welcome!")
+                        break

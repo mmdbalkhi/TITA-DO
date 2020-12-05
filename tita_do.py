@@ -6,8 +6,8 @@ TITA-DO MIT licance.
 #import pickle
 from time import sleep
 from sys import exit
-from moudul.ask_name import ask_name
-from moudul.enigma import Enigma_starter
+from models.AskName import ask_name
+from models.enigma import Enigma_starter
 
 print("\n\t :)   You Todo with TITA-DO    (:")
 print(" TITA-DO      =.|.=     Hyd_Prime version")

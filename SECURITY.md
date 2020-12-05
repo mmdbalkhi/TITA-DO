@@ -7,8 +7,9 @@ The hyd version is currently under development and up to secondary information i
 
 | Version | Supported          |
 | ------- | ------------------ |
-| Hyd 1   | :heavy_check_mark: |
-| version 1| :white_check_mark: |
+| Hyd 1.1   | Yes  |
+| Hyd 1| No |
+|version 1| No |
 
 
 ## Reporting a Vulnerability

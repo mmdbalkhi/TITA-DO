@@ -11,7 +11,8 @@ This program is made with **pickled** and **time** libraries, which are installe
 
 - [x]  load last data!
 - [x]  Make the app more secure, Uses encryption for your information
-- [ ]  sign in a acount!
+- [ ]  Web browsing with django
+- [ ]  Sign in to your Google Account to store information where it always has information everywhere
 
 ----------------------
 

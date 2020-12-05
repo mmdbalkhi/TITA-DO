@@ -48,4 +48,3 @@ def ask_name():
             dump(str(input_pass), file_p)
             str(file.write(input_name))
             print("your user is Crated \n \t\t welcome!")
-ask_name()

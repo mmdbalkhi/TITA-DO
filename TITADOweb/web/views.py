@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-def submit_TODO(request):
+
+def Todo():
     """User submit and request"""
-    return "we are hare"
+    return "we here"

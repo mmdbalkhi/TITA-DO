@@ -1,6 +1,9 @@
 from django.conf.urls import url
-from . import views
+from django.urls import path
+
+from .views import Todo
 
 urlpatterns = [
-    url(r'^submit/TODO/$', views.submit_TODO, name='TODO')
+    #url(r'^submitTodo/$', submitTodo, name='submitTodo'),
+    path('submitTodo/', Todo, name='Todo')
 ]

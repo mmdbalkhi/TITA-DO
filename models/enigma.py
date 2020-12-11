@@ -44,9 +44,9 @@ def rotate_rotors():
     '''enigma_one_char'''
     global Rotor1, Rotor2, Rotor3
     Rotor1 = Rotor1[1:] + Rotor1[0]
-    if state % 26:
+    if state % 95:
         Rotor2 = Rotor2[1:] + Rotor2[0]
-    if state % (26 * 26):
+    if state % (95 * 95):
         Rotor3 = Rotor3[1:] + Rotor3[0]
 
 state = 0

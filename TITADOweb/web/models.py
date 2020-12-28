@@ -7,6 +7,13 @@ from django.utils import timezone
 
 
 
+class Passwordresetcodes(models.Model):
+    code = models.CharField(max_length=32)
+    email = models.CharField(max_length=120)
+    time = models.DateTimeField()
+    username = models.CharField(max_length=50)
+    password = models.CharField(max_length=50)  # TODO: do not save password
+
 
 class Token(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -14,6 +21,7 @@ class Token(models.Model):
 
     def __unicode__(self):
         return "{}_token".format(self.user)
+
 
 class TODO(models.Model):
     TODO = models.CharField(max_length=250)

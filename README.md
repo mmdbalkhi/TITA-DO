@@ -14,9 +14,17 @@ This program is made with **pickled** and **time** libraries, which are installe
 
 #### run app
 `cd TITADOweb`
+<br></br>
+
 `virtualenv -p python3 .env`
+<br></br>
+
 `pip install -r requirements.txt`
+<br></br>
+
 `python3 manage.py runserver`
+<br></br>
+
 ##   Ver Lit 3.10
 
 <br></br>

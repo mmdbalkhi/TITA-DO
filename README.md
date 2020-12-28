@@ -9,13 +9,15 @@ This program is made with **pickled** and **time** libraries, which are installe
 
 ### TODO List
 
-- [x]  load last data!
-- [x]  Make the app more secure, Uses encryption for your information
-- [ ]  sign in a acount!
-
+- [ ]  django
 ----------------------
 
-##   Ver Hyd 1.0
+#### run app
+`cd TITADOweb`
+`virtualenv -p python3 .env`
+`pip install -r requirements.txt`
+`python3 manage.py runserver`
+##   Ver Lit 3.10
 
 <br></br>
 [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)

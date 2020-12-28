@@ -5,7 +5,6 @@
 
 Hello. This is the program with **Python** that plays the role of your **program manager**!
 
-This program is made with **pickled** and **time** libraries, which are installed by **default** and do not need to be installed.
 
 ### TODO List
 

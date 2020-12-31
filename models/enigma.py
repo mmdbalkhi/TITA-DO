@@ -6,7 +6,7 @@ alphabet = '''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~`!@
 cipher = ''''''
 
 
-File = open('./Data/Enigma.Eng', 'ab')
+File = open('../Data/Enigma.Eng', 'ab')
 Rotor1 = list(alphabet)
 random.shuffle(Rotor1)
 Rotor1 = ''.join(Rotor1)
@@ -20,7 +20,7 @@ Rotor3 = ''.join(Rotor3)
 dump((Rotor1, Rotor2, Rotor3), File)
 File.close()
 
-file = open("./Data/Enigma.Eng", "rb")
+file = open("../Data/Enigma.Eng", "rb")
 Rotor1, Rotor2, Rotor3 = load(file)
 file.close()
 
@@ -44,9 +44,9 @@ def rotate_rotors():
     '''enigma_one_char'''
     global Rotor1, Rotor2, Rotor3
     Rotor1 = Rotor1[1:] + Rotor1[0]
-    if state % 95:
+    if state % 26:
         Rotor2 = Rotor2[1:] + Rotor2[0]
-    if state % (95 * 95):
+    if state % (26 * 26):
         Rotor3 = Rotor3[1:] + Rotor3[0]
 
 state = 0

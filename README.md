@@ -8,7 +8,8 @@ Hello. This is the program with **Python** that plays the role of your **program
 
 ### TODO List
 
-- [ ]  django
+- [x]  django
+- [ ] User problem at work without the need to build the user
 ----------------------
 
 #### run app

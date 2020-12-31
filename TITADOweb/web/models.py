@@ -1,18 +1,9 @@
-# Create your models here.
-from datetime import timedelta
-
-from django.contrib.auth.models import User
+from __future__ import unicode_literals
+from django.utils.crypto import get_random_string
 from django.db import models
-from django.utils import timezone
+from django.contrib.auth.models import User
+from django.forms import BooleanField
 
-
-
-class Passwordresetcodes(models.Model):
-    code = models.CharField(max_length=32)
-    email = models.CharField(max_length=120)
-    time = models.DateTimeField()
-    username = models.CharField(max_length=50)
-    password = models.CharField(max_length=50)  # TODO: do not save password
 
 
 class Token(models.Model):
@@ -23,24 +14,12 @@ class Token(models.Model):
         return "{}_token".format(self.user)
 
 
-class TODO(models.Model):
-    TODO = models.CharField(max_length=250)
-    pub_date = models.DateTimeField('date published')
-
-    def __str__(self):
-        return self.TODO
-
-    def was_published_recently(self):
-        return self.pub_date >= timezone.now() - timedelta(days=1)
-
+class Todos(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    todo = models.CharField(max_length=255)
+    text = models.CharField(max_length=1000, default='')
+    date = models.DateTimeField()
+    checkBox = BooleanField()
     def __unicode__(self):
-        return "{}-{}".format(self.pub_date, self.TODO)
+        return "{}-{}-{}".format(self.date, self.user, self.todo)
 
-
-class Choice(models.Model):
-    TODO = models.ForeignKey(TODO, on_delete=models.CASCADE)
-    choice_text = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
-
-    def __str__(self):
-        return self.choice_text

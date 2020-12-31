@@ -19,7 +19,7 @@ class Todos(models.Model):
     todo = models.CharField(max_length=255)
     text = models.CharField(max_length=1000, default='')
     date = models.DateTimeField()
-    checkBox = BooleanField()
+    checkBox = BooleanField() # TODO: not working
     def __unicode__(self):
         return "{}-{}-{}".format(self.date, self.user, self.todo)
 

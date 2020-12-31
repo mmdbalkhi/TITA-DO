@@ -12,10 +12,16 @@ Hello. This is the program with **Python** that plays the role of your **program
 ----------------------
 
 #### run app
-`cd TITADOweb`
+`pip install -r requirements.txt`
 <br></br>
 
-`pip install -r requirements.txt`
+`python manage.py makemigrations`
+<br></br>
+
+`python manage.py migrate`
+<br></br>
+
+`python manage.py createsuperuser`
 <br></br>
 
 `python3 manage.py runserver`

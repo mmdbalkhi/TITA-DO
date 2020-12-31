@@ -22,6 +22,7 @@ Hello. This is the program with **Python** that plays the role of your **program
 <br></br>
 
 `python manage.py createsuperuser`
+__Unfortunately, it is not possible to create and register a user at this time__
 <br></br>
 
 `python3 manage.py runserver`

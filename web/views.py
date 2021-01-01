@@ -9,8 +9,7 @@ from web.models import Todos, Token, User
 # Create your views here.
 
 
-# submit an expanse to system (api) , input : token(POST) , output :
-# status = (ok)
+# status = (ok and no)
 @csrf_exempt
 def postTodo(request):
     """ submit an Todo """

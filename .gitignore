@@ -133,5 +133,5 @@ dmypy.json
 *.Tita
 *.do
 *.sqlite3
-TITADOweb/web/migrations/*
+web/migrations/*
 *.swp

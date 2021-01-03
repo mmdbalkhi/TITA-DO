@@ -15,11 +15,10 @@ class Token(models.Model):
 
 
 class Todos(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    todo = models.CharField(max_length=255)
-    text = models.CharField(max_length=1000, default='')
+    text = models.CharField(max_length=255)
     date = models.DateTimeField()
-    checkBox = BooleanField() # TODO: not working
+    Todo = models.CharField(max_length=255)
+
     def __unicode__(self):
-        return "{}-{}-{}".format(self.date, self.user, self.todo)
+        return "{}-{}-{}".format(self.date, self.user, self.amount)
 

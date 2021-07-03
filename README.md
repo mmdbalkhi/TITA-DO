@@ -1,4 +1,5 @@
 # TITA-DO
+# Work on the project has stopped
 
 ## You Todo with TITA-DO!
 ## It is better to use *Python3*
